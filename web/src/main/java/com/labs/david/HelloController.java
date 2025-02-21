@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 public class HelloController {
 
-    private IHello hello = new HelloImpl();
+    private IHello helloService = new HelloImpl();
     @GetMapping
     public String sayHello() {
-        return hello.sayHello();
+        return helloService.sayHello();
     }
 }
